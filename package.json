@@ -1,6 +1,6 @@
 {
   "name": "electerm",
-  "version": "1.25.16",
+  "version": "1.25.18",
   "description": "Terminal/ssh/telnet/serialport/sftp client(linux, mac, win)",
   "main": "app.js",
   "bin": "npm/electerm",
@@ -19,6 +19,7 @@
     "output": "./node_modules/.bin/electron-builder",
     "build-mac": "node bin/build-mac",
     "build-mac-arm": "node bin/build-mac-arm",
+    "build-linux-arm": "node bin/build-linux-arm",
     "build-linux-1": "node bin/build-linux-1",
     "build-linux-2": "node bin/build-linux-2",
     "build-win-1": "node bin/build-win-1",

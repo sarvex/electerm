@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+  - 16
+arch:
+  - arm64
+branches:
+  only:
+    - build
+    - test
+
+if: |
+  branch IN (build,test) AND
+  NOT commit_message =~ /\[skip build\]|\[skip ci\]|\[skip linux\]|\[skip linuxarm\]/
+
+before_install:
+  - npm install -g yarn
+install:
+  - npm install
+script:
+  - npm run pre-test
+  - npm run build-linux-arm
+
+notifications:
+  email: false
